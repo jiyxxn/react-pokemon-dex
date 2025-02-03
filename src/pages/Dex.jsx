@@ -50,7 +50,7 @@ const Dex = () => {
   };
 
   return (
-    <SectionWrapper>
+    <SectionWrapper $gradient>
       <Dashboard pokemon={pokemon} registerPokemon={registerPokemon} />
       <PokemonList
         pokemonData={POKEMON_DATA}
