@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/Button';
-import { SectionWrapper } from '../components/SectionWrapper';
+import { SectionWrapper } from '../components/Wrapper.jsx';
 
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <SectionWrapper>
+    <SectionWrapper height={'100vh'}>
       <h1>
         <img src="../../public/pokemon_logo.png" alt="포켓몬 로고" />
       </h1>

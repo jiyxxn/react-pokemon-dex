@@ -1,32 +1,46 @@
 import styled from 'styled-components';
 import EmptyCard from './EmptyCard';
-
-const BoardWrapper = styled.section`
-  background-color: #fdf7e5;
-  border-radius: 10px;
-  padding: 40px;
-`;
+import { BoardWrapper } from './Wrapper';
+import { MAX_POKEMON } from '../shared/constants.js';
+import PokemonCard from './PokemonCard.jsx';
 
 const StUl = styled.ul`
   width: 100%;
   display: flex;
-  gap: 60px;
+  gap: 40px;
 `;
 
-const Dashboard = () => {
-  const renderEmptyList = () => {
-    const MAX_POKE_BALL = 6;
-    const emptyCards = [];
-    for (let i = 0; i < MAX_POKE_BALL; i++) {
-      emptyCards.push(<EmptyCard key={i} />);
+const Dashboard = ({ pokemon, registerPokemon }) => {
+  const renderSelectedPokemonList = () => {
+    const renderList = [];
+    for (let i = 0; i < MAX_POKEMON; i++) {
+      if (pokemon[i]) {
+        renderList.push(
+          <PokemonCard
+            key={i}
+            img={pokemon[i].img_url}
+            name={pokemon[i].korean_name}
+            number={pokemon[i].id}
+            types={pokemon[i].types}
+            button={'delete'}
+            registerPokemon={registerPokemon}
+          />
+        );
+      } else {
+        renderList.push(<EmptyCard key={i} />);
+      }
     }
-    return emptyCards;
+    return renderList;
   };
 
   return (
-    <BoardWrapper>
-      <h2>나만의 포켓몬</h2>
-      <StUl>{renderEmptyList()}</StUl>
+    <BoardWrapper
+      $padding="40px"
+      $backgroundColor="#fdf7e5"
+      $shadow="0px 0px 10px 2px #e2c6ac;"
+    >
+      <h2>Registered Pokémon 💫</h2>
+      <StUl>{renderSelectedPokemonList()}</StUl>
     </BoardWrapper>
   );
 };
