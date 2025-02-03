@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import EmptyCard from './EmptyCard';
-
-const BoardWrapper = styled.section`
-  background-color: #fdf7e5;
-  border-radius: 10px;
-  padding: 40px;
-`;
+import { BoardWrapper } from './Wrapper';
 
 const StUl = styled.ul`
   width: 100%;
@@ -24,8 +19,12 @@ const Dashboard = () => {
   };
 
   return (
-    <BoardWrapper>
-      <h2>나만의 포켓몬</h2>
+    <BoardWrapper
+      $padding="40px"
+      $backgroundColor="#fdf7e5"
+      $shadow="0px 0px 10px 2px #e2c6ac;"
+    >
+      <h2>Registered Pokémon 💫</h2>
       <StUl>{renderEmptyList()}</StUl>
     </BoardWrapper>
   );
