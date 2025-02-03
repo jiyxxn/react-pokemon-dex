@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  font-family: 'nexonGothic';
+  font-family: inherit;
   font-size: ${(props) => (props.$big ? '20px' : '14px')};
   font-weight: ${(props) => (props.$big ? 'bold' : 'normal')};
-  padding: 12px 20px;
+  padding: 8px 18px;
   border-radius: 8px;
   border: none;
-  color: ${(props) => (props.color ? props.color : '#333')};
+  color: ${(props) => (props.color ? props.color : '#fafafa')};
   letter-spacing: -0.008em;
-  border: solid 2px #3b5ca7;
+  /* border: solid 2px #3b5ca7; */
+  background-color: #df8b37;
   cursor: pointer;
 `;
