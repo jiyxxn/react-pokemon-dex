@@ -2,6 +2,8 @@ import { Button } from './Button';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import formatNumberWithZeros from '../utils/formatNumberWithZeros';
+import matchTypes from '../utils/matchTypes';
+import TypeLi from './TypeLi';
 
 const CardLi = styled.li`
   width: 100%;
@@ -15,6 +17,7 @@ const CardLi = styled.li`
   align-items: center;
   gap: 12px;
   flex: 1;
+  box-shadow: 0px 0px 8px 2px #eed995;
 
   p,
   li {
@@ -30,10 +33,7 @@ const CardLi = styled.li`
 
   ul {
     display: flex;
-  }
-
-  li + li::before {
-    content: ', ';
+    gap: 6px;
   }
 `;
 
@@ -61,7 +61,9 @@ const PokemonCard = ({
       <p>No. {dexNumber}</p>
       <ul>
         {types.map((type, idx) => (
-          <li key={idx}>{type}</li>
+          <TypeLi key={idx} data-type={matchTypes(type)}>
+            {type}
+          </TypeLi>
         ))}
       </ul>
       <Button
