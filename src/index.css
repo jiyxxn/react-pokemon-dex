@@ -1,0 +1,9 @@
+@import url(./styles/reset.css);
+@import url(./styles/font.css);
+
+body {
+  background: linear-gradient(#fcefc8, #f3d37c);
+  font-family: 'nexonGothic';
+  font-size: 12px;
+  color: #333;
+}
