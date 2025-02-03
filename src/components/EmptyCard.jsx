@@ -8,15 +8,17 @@ const StCard = styled.li`
   justify-content: center;
   border: dashed 2px #aaa;
   border-radius: 10px;
-`;
-const StImg = styled.img`
-  width: ${(props) => (props.width ? props.width : '100%')};
+
+  > img {
+    // 포켓볼 이미지
+    width: 50%;
+  }
 `;
 
 const EmptyCard = () => {
   return (
     <StCard>
-      <StImg width={'50%'} src="../../public/pokeball.png" alt="" />
+      <img src="../../public/pokeball.png" alt="" />
     </StCard>
   );
 };
