@@ -13,7 +13,6 @@ const StUl = styled.ul`
 const Dashboard = ({ pokemon, registerPokemon }) => {
   const renderSelectedPokemonList = () => {
     const renderList = [];
-    console.log('pokemon =====>', pokemon);
     for (let i = 0; i < MAX_POKEMON; i++) {
       if (pokemon[i]) {
         renderList.push(
