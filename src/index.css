@@ -1,9 +1,18 @@
 @import url(./styles/reset.css);
-@import url(./styles/font.css);
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 
 body {
-  background: linear-gradient(#fcefc8, #f3d37c);
-  font-family: 'nexonGothic';
-  font-size: 12px;
+  background: linear-gradient(#fcefc8 0, #f3d37c 20%, #fcefc8 60%, #f3d37c 80%);
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
   color: #333;
+  letter-spacing: -0.08em;
+}
+
+img {
+  width: 100%;
+}
+
+#root {
+  min-width: 850px;
 }
