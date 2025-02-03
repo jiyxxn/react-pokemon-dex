@@ -18,7 +18,7 @@ const StCard = styled.li`
 const EmptyCard = () => {
   return (
     <StCard>
-      <img src="../../public/pokeball.png" alt="" />
+      <img src="../../public/monster_ball.png" alt="" />
     </StCard>
   );
 };
