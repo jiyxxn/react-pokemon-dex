@@ -17,7 +17,7 @@ const GridUl = styled.ul`
   }
 `;
 
-const PokemonList = ({ pokemonData }) => {
+const PokemonList = ({ pokemonData, registerPokemon }) => {
   return (
     <BoardWrapper>
       <GridUl>
@@ -29,6 +29,9 @@ const PokemonList = ({ pokemonData }) => {
               name={data.korean_name}
               number={data.id}
               types={data.types}
+              button={'register'}
+              registerPokemon={registerPokemon}
+              arrivedAt={`/detail/${data.id}`}
             />
           );
         })}
