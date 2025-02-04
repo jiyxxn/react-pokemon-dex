@@ -17,40 +17,39 @@ const Dex = () => {
 
     e.stopPropagation(); // detail 페이지로 이동하는 것 방지
 
-    setPokemon((prevData) => {
-      // toggleBtn [data-toggle= "register" || "delete"]
-      switch (toggleBtn) {
-        // * 포켓몬 등록
-        case 'register': {
-          if (!validateMaximum(prevData, MAX_POKEMON)) {
-            // ! Error
-            // * 아래 같은 토스트 알럿을 validateMaximum 함수에서 호출해도 동일한 이슈 발생함
-            toast.warning('더 이상 데려갈 수 없습니다.');
-            return prevData;
+    // toggleBtn [data-toggle= "register" || "delete"]
+    switch (toggleBtn) {
+      // * 포켓몬 등록
+      case 'register':
+        {
+          if (!validateMaximum(pokemon, MAX_POKEMON)) {
+            toast.error('더 이상 데려갈 수 없습니다.');
+            return pokemon;
           }
-          if (!validateExisted(prevData, selectedId)) return prevData;
+          if (!validateExisted(pokemon, selectedId)) {
+            toast.error('이미 데려간 포켓몬입니다.');
+            return pokemon;
+          }
 
           const selectedPokemonList = POKEMON_DATA.filter((data) => {
             return data.id === Number(selectedId);
           });
 
-          return [...prevData, ...selectedPokemonList];
+          toast.success('포켓몬이 전투에 참여합니다.');
+          setPokemon((prev) => [...prev, ...selectedPokemonList]);
         }
+        break;
 
-        // * 포켓몬 삭제
-        case 'delete': {
-          // alert('삭제되었습니다.');
+      // * 포켓몬 삭제
+      case 'delete': {
+        const remainedPokemonList = pokemon.filter((data) => {
+          return data.id !== Number(selectedId);
+        });
 
-          const remainedPokemonList = prevData.filter((data) => {
-            return data.id !== Number(selectedId);
-          });
-          return [...remainedPokemonList];
-        }
-
-        default:
-          return prevData;
+        toast.success(`포켓몬이 집으로 돌아갔습니다.`);
+        setPokemon([...remainedPokemonList]);
       }
-    });
+    }
   };
 
   return (
