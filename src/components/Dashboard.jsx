@@ -3,6 +3,8 @@ import EmptyCard from './EmptyCard';
 import { BoardWrapper } from './Wrapper';
 import { MAX_POKEMON } from '../shared/constants.js';
 import PokemonCard from './PokemonCard.jsx';
+import { useContext } from 'react';
+import { PokemonContext } from '../context/PokemonContext.jsx';
 
 const StUl = styled.ul`
   width: 100%;
@@ -10,7 +12,10 @@ const StUl = styled.ul`
   gap: 40px;
 `;
 
-const Dashboard = ({ pokemon, registerPokemon }) => {
+const Dashboard = () => {
+  const pokemonContext = useContext(PokemonContext);
+  const { pokemon, handleSelectedPokemon } = pokemonContext;
+
   const renderSelectedPokemonList = () => {
     const renderList = [];
     for (let i = 0; i < MAX_POKEMON; i++) {
@@ -23,7 +28,8 @@ const Dashboard = ({ pokemon, registerPokemon }) => {
             number={pokemon[i].id}
             types={pokemon[i].types}
             button={'delete'}
-            registerPokemon={registerPokemon}
+            arrivedAt={`/detail/${pokemon[i].id}`}
+            handleSelectedPokemon={handleSelectedPokemon}
           />
         );
       } else {

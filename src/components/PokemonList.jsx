@@ -1,6 +1,8 @@
 import { BoardWrapper } from './Wrapper';
 import PokemonCard from './PokemonCard';
 import styled from 'styled-components';
+import { useContext } from 'react';
+import { PokemonContext } from '../context/PokemonContext';
 
 const GridUl = styled.ul`
   width: 100%;
@@ -17,7 +19,10 @@ const GridUl = styled.ul`
   }
 `;
 
-const PokemonList = ({ pokemonData, registerPokemon }) => {
+const PokemonList = () => {
+  const pokemonContext = useContext(PokemonContext);
+  const { pokemonData, handleSelectedPokemon } = pokemonContext;
+
   return (
     <BoardWrapper>
       <GridUl>
@@ -30,8 +35,8 @@ const PokemonList = ({ pokemonData, registerPokemon }) => {
               number={data.id}
               types={data.types}
               button={'register'}
-              registerPokemon={registerPokemon}
               arrivedAt={`/detail/${data.id}`}
+              handleSelectedPokemon={handleSelectedPokemon}
             />
           );
         })}

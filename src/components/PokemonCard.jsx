@@ -43,7 +43,7 @@ const PokemonCard = ({
   number,
   types,
   button,
-  registerPokemon,
+  handleSelectedPokemon,
   arrivedAt = '',
 }) => {
   const dexNumber = formatNumberWithZeros(number, '3');
@@ -69,7 +69,7 @@ const PokemonCard = ({
       <Button
         type="button"
         data-toggle={button}
-        onClick={(e) => registerPokemon(e)}
+        onClick={(e) => handleSelectedPokemon(e)}
       >
         {button === 'register' ? '데려가기' : '삭제하기'}
       </Button>
