@@ -1,14 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Dashboard from '../components/Dashboard';
 import PokemonList from '../components/PokemonList';
 import { SectionWrapper } from '../components/Wrapper.jsx';
 import POKEMON_DATA from '../mocks/pokemonData.js';
 import { MAX_POKEMON } from '../shared/constants.js';
+import { PokemonContext } from '../context/PokemonContext.jsx';
 
 const Dex = () => {
   const [pokemon, setPokemon] = useState([]);
 
-  const registerPokemon = (e) => {
+  const handleSelectedPokemon = (e) => {
     const toggleBtn = e.target.getAttribute('data-toggle');
     const selectedId = e.target.closest('li').getAttribute('data-id');
 
@@ -51,11 +52,12 @@ const Dex = () => {
 
   return (
     <SectionWrapper $gradient>
-      <Dashboard pokemon={pokemon} registerPokemon={registerPokemon} />
-      <PokemonList
-        pokemonData={POKEMON_DATA}
-        registerPokemon={registerPokemon}
-      />
+      <PokemonContext.Provider
+        value={{ pokemon, handleSelectedPokemon, pokemonData: POKEMON_DATA }}
+      >
+        <Dashboard />
+        <PokemonList />
+      </PokemonContext.Provider>
     </SectionWrapper>
   );
 };
