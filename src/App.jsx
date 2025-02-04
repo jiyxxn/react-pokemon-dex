@@ -1,6 +1,6 @@
 import './App.css';
 import Router from './shared/Router';
-import { ToastContainer, Bounce } from 'react-toastify';
+import { ToastContainer, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -8,11 +8,12 @@ function App() {
     <>
       <Router />
       <ToastContainer
-        position="top-center"
+        position="top-right"
+        hideProgressBar
         closeButton={false}
-        autoClose={4000}
+        autoClose={1000}
         theme="light"
-        transition={Bounce}
+        transition={Slide}
       />
     </>
   );
