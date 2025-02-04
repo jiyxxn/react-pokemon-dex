@@ -18,13 +18,16 @@ const DetailCard = styled.div`
   padding: 40px;
   border: double 4px #f3d37c;
   box-shadow: 0px 0px 20px 4px #f3d37c7b;
+
   p {
     font-size: 1.2em;
   }
+
   p.poke-name {
     font-size: 1.8em;
     font-weight: 800;
   }
+
   img {
     width: 60%;
   }
