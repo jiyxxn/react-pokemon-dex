@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import POKEMON_DATA from '../mocks/pokemonData.js';
+import { MAX_POKEMON } from '../shared/constants.js';
 import Dashboard from '../components/Dashboard';
 import PokemonList from '../components/PokemonList';
 import { SectionWrapper } from '../components/Wrapper.jsx';
-import POKEMON_DATA from '../mocks/pokemonData.js';
-import { MAX_POKEMON } from '../shared/constants.js';
 import { PokemonContext } from '../context/PokemonContext.jsx';
+import { validateExisted, validateMaximum } from '../utils/validate.js';
+import { toast } from 'react-toastify';
 
 const Dex = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -16,20 +18,17 @@ const Dex = () => {
     e.stopPropagation(); // detail 페이지로 이동하는 것 방지
 
     setPokemon((prevData) => {
+      // toggleBtn [data-toggle= "register" || "delete"]
       switch (toggleBtn) {
+        // * 포켓몬 등록
         case 'register': {
-          if (prevData.length >= MAX_POKEMON) {
-            alert('더 이상 데려갈 수 없습니다.');
+          if (!validateMaximum(prevData, MAX_POKEMON)) {
+            // ! Error
+            // * 아래 같은 토스트 알럿을 validateMaximum 함수에서 호출해도 동일한 이슈 발생함
+            toast.warning('더 이상 데려갈 수 없습니다.');
             return prevData;
           }
-          const isExisted = prevData.filter((data) => {
-            return data.id === Number(selectedId);
-          });
-
-          if (isExisted.length > 0) {
-            alert('이미 데려간 포켓몬입니다.');
-            return prevData;
-          }
+          if (!validateExisted(prevData, selectedId)) return prevData;
 
           const selectedPokemonList = POKEMON_DATA.filter((data) => {
             return data.id === Number(selectedId);
@@ -38,14 +37,18 @@ const Dex = () => {
           return [...prevData, ...selectedPokemonList];
         }
 
+        // * 포켓몬 삭제
         case 'delete': {
           // alert('삭제되었습니다.');
 
-          const remainedPokemonList = pokemon.filter((data) => {
+          const remainedPokemonList = prevData.filter((data) => {
             return data.id !== Number(selectedId);
           });
           return [...remainedPokemonList];
         }
+
+        default:
+          return prevData;
       }
     });
   };
