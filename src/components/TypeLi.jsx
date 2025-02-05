@@ -5,6 +5,7 @@ const TypeLi = styled.li`
   text-align: center;
   padding: 4px 10px;
   border-radius: 4px;
+  white-space: nowrap;
 
   &[data-type='grass'] {
     border: solid 1px #5bc25b;

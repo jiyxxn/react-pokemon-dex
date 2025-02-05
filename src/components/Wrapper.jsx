@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionWrapper = styled.section`
+  position: relative;
   width: 100%;
   height: ${(props) => (props.height ? props.height : 'auto')};
   margin: 0 auto;
@@ -23,6 +24,7 @@ export const BoardWrapper = styled.section`
   border-radius: 10px;
   padding: ${(props) => (props.$padding ? props.$padding : 0)};
   box-shadow: ${(props) => (props.$shadow ? props.$shadow : 0)};
+  overflow: hidden;
 
   + section {
     margin-top: 20px;

@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 const StCard = styled.li`
   width: 100%;
-  flex: 1;
-  aspect-ratio: 1 / 1;
   padding: 20px 26px;
+  aspect-ratio: 1 / 1.5;
   display: flex;
   align-items: center;
   justify-content: center;
