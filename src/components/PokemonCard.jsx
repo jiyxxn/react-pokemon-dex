@@ -59,6 +59,11 @@ const CardLi = styled.div`
   align-items: center;
   gap: 12px;
   box-shadow: 0px 0px 8px 2px #eed995;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   p,
   li {

@@ -20,11 +20,11 @@ export const SectionWrapper = styled.section`
 export const BoardWrapper = styled.section`
   width: 100%;
   background-color: ${(props) =>
-    props.$backgroundColor ? props.$backgroundColor : 'none'};
+    props.$backgroundColor ? props.$backgroundColor : 'unset'};
   border-radius: 10px;
   padding: ${(props) => (props.$padding ? props.$padding : 0)};
-  box-shadow: ${(props) => (props.$shadow ? props.$shadow : 0)};
-  overflow: hidden;
+  box-shadow: ${(props) => (props.$shadow ? props.$shadow : 'none')};
+  overflow: ${(props) => (props.$overflow ? props.$overflow : 'visible')};
 
   + section {
     margin-top: 20px;

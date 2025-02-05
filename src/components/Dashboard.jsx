@@ -47,6 +47,7 @@ const Dashboard = () => {
         $padding="40px"
         $backgroundColor="#fdf7e5"
         $shadow="0px 0px 10px 2px #e2c6ac;"
+        $overflow="hidden"
       >
         <h2>Registered Pokémon 💫</h2>
         <Swiper
