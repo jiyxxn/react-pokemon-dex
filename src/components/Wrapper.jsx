@@ -31,10 +31,12 @@ export const BoardWrapper = styled.section`
   }
 
   h2 {
-    font-size: 1.8em;
+    font-family: 'Galmuri9';
+    font-size: 2em;
     text-align: center;
     margin-bottom: 40px;
-    font-weight: 700;
+    font-weight: 600;
     color: #3b5ca7;
+    letter-spacing: 0.1em;
   }
 `;

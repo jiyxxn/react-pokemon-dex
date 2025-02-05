@@ -49,7 +49,7 @@ const Dashboard = () => {
         $shadow="0px 0px 10px 2px #e2c6ac;"
         $overflow="hidden"
       >
-        <h2>Registered Pokémon 💫</h2>
+        <h2>Battle Partners 🚀</h2>
         <Swiper
           spaceBetween={20}
           slidesPerView={2}
