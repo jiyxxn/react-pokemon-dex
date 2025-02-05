@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { deletePokemon, registerPokemon } from '../store/pokemonSlice';
+import toggleBtnType from '../utils/toggleBtnType';
 
 const usePokemonActions = () => {
   const dispatch = useDispatch();
@@ -14,8 +15,10 @@ const usePokemonActions = () => {
 
     if (toggleBtn === 'register') {
       dispatch(registerPokemon(selectedId));
+      toggleBtnType(e, '삭제하기', 'delete');
     } else if (toggleBtn === 'delete') {
       dispatch(deletePokemon(selectedId));
+      toggleBtnType(e, '데려가기', 'register');
     }
   };
 
