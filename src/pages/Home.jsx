@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <SectionWrapper height={'100vh'}>
       <h1>
-        <img src="../../public/pokemon_logo.png" alt="포켓몬 로고" />
+        <img src="/pokemon_logo.png" alt="포켓몬 로고" />
       </h1>
       <Button
         $big
