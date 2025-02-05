@@ -11,7 +11,8 @@ const Home = () => {
       </h1>
       <Button
         $big
-        color="#3b5ca7"
+        color="#fffab7"
+        backgroundColor="#3b5ca7"
         onClick={() => {
           navigate('./dex');
         }}

@@ -9,6 +9,7 @@ export const Button = styled.button`
   border: none;
   color: ${(props) => (props.color ? props.color : '#fafafa')};
   letter-spacing: -0.008em;
-  background-color: #df8b37;
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : '#df8b37'};
   cursor: pointer;
 `;
