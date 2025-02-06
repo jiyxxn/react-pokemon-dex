@@ -14,6 +14,7 @@ const PokemonCard = ({
   onPokemonSelect,
   arrivedAt = '',
 }) => {
+  // 도감 번호
   const dexNumber = formatNumberWithZeros(number, '3');
   const navigate = useNavigate();
 
