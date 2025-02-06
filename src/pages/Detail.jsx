@@ -6,7 +6,7 @@ import TypeLi from '../components/TypeLi.jsx';
 import matchTypes from '../shared/matchTypes.js';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import { validateExisted } from '../utils/validate.js';
+import { validateNotExisted } from '../utils/validate.js';
 import usePokemonActions from '../hooks/usePokemonActions.js';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -47,7 +47,7 @@ const Detail = () => {
         </ul>
         <p>{description}</p>
 
-        {validateExisted(selectedPokemon, pokeId) ? (
+        {validateNotExisted(selectedPokemon, pokeId) ? (
           <Button
             onClick={(e) => handleSelectedPokemon(e)}
             data-toggle="register"
