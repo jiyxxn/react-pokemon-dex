@@ -24,7 +24,7 @@ const Dashboard = () => {
               number={pokemon[i].id}
               types={pokemon[i].types}
               button="delete"
-              arrivedAt={`/detail/${pokemon[i].id}`}
+              arrivedAt={`/detail?dexNum=${pokemon[i].id}`}
               onPokemonSelect={handleSelectedPokemon}
             />
           </SwiperSlide>
