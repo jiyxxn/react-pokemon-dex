@@ -15,6 +15,7 @@ export const SectionWrapper = styled.section`
     props.$gradient
       ? 'linear-gradient(#fcefc8 0, #f3d37c 20%, #fcefc8 60%, #f3d37c 80%)'
       : ' #fcefc8'};
+  overflow-x: hidden;
   overflow-y: scroll;
 `;
 
