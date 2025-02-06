@@ -61,6 +61,7 @@ const CardLi = styled.div`
   gap: 12px;
   box-shadow: 0px 0px 8px 2px #eed995;
   transition: transform 0.3s;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.05);
