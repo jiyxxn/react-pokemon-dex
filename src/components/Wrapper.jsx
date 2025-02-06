@@ -6,7 +6,7 @@ export const SectionWrapper = styled.section`
   height: ${(props) => (props.height ? props.height : 'auto')};
   margin: 0 auto;
   padding: 50px 3%;
-  display: grid;
+  display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
@@ -15,12 +15,12 @@ export const SectionWrapper = styled.section`
     props.$gradient
       ? 'linear-gradient(#fcefc8 0, #f3d37c 20%, #fcefc8 60%, #f3d37c 80%)'
       : ' #fcefc8'};
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden scroll;
 `;
 
 export const BoardWrapper = styled.section`
   width: 100%;
+  max-width: 100%; /* 최대 크기 제한 */
   background-color: ${(props) =>
     props.$backgroundColor ? props.$backgroundColor : 'unset'};
   border-radius: 10px;
