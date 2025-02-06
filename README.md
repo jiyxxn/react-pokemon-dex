@@ -1,5 +1,5 @@
-<div align="center">
-<img src="https://github.com/user-attachments/assets/673178e2-3e14-4c68-b446-94f5308c5100" width="300">
+![image](https://github.com/user-attachments/assets/10fc1ac7-4fdd-45fc-84fc-d107b571bc12)<div align="center">
+<img src="https://github.com/user-attachments/assets/1c5fa41e-fe77-4b6c-b244-cba083050fd3" width="400">
 </div>
 
 <br>
@@ -26,16 +26,19 @@
 
 ## 📑 페이지 구성
 ### 1. `/home`
-![image](https://github.com/user-attachments/assets/8090139f-7e37-4c3b-84e8-dc9b17936b83)
+![image](https://github.com/user-attachments/assets/d7cdd584-4731-4ef2-ad4b-272f8b4612a0)
+
 <br>
 
 ### 2. `/dex`
-![image](https://github.com/user-attachments/assets/ea659c74-7759-4136-93aa-26f454311ca6)
+![image](https://github.com/user-attachments/assets/b4d0097a-81dc-4dc0-a5e1-c58d0b399844)
+
 
 <br>
 
 ### 3. `/detail`
-![image](https://github.com/user-attachments/assets/a6c031b0-d790-4943-9345-cd372d909976)
+![image](https://github.com/user-attachments/assets/93bee393-debc-4002-9488-e2021208d7c7)
+
 
 
 <br>
