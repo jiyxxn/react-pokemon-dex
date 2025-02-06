@@ -2,6 +2,10 @@
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
 @import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
 
+html {
+  background-color: #fcefc8;
+}
+
 body {
   font-family: 'Noto Sans KR';
   font-size: 16px;
