@@ -63,7 +63,7 @@
 ## 📁 프로젝트 구조
 
 ```markdown
-react-pokemon-dex
+📁
 ├─ index.html
 ├─ public // 🖼️ 이미지 파일 관리
 ├─ src
