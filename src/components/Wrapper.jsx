@@ -25,7 +25,7 @@ export const BoardWrapper = styled.section`
     props.$backgroundColor ? props.$backgroundColor : 'unset'};
   border-radius: 10px;
   padding: ${(props) => (props.$padding ? props.$padding : 0)};
-  box-shadow: ${(props) => (props.$shadow ? props.$shadow : 'none')};
+  box-shadow: ${(props) => (props.$boxShadow ? props.$boxShadow : 'none')};
   overflow: ${(props) => (props.$overflow ? props.$overflow : 'visible')};
 
   + section {
