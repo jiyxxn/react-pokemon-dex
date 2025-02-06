@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+const EmptyCard = () => {
+  return (
+    <StCard>
+      <img src="/monster_ball.png" alt="" />
+    </StCard>
+  );
+};
+
 const StCard = styled.li`
   width: 100%;
   padding: 20px 26px;
@@ -15,13 +23,5 @@ const StCard = styled.li`
     width: 50%;
   }
 `;
-
-const EmptyCard = () => {
-  return (
-    <StCard>
-      <img src="/monster_ball.png" alt="" />
-    </StCard>
-  );
-};
 
 export default EmptyCard;
