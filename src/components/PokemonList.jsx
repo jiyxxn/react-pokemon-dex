@@ -19,7 +19,7 @@ const PokemonList = () => {
                 name={data.korean_name}
                 number={data.id}
                 types={data.types}
-                button={'register'}
+                button="register"
                 arrivedAt={`/detail/${data.id}`}
                 onPokemonSelect={handleSelectedPokemon}
               />

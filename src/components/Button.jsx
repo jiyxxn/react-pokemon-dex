@@ -12,4 +12,8 @@ export const Button = styled.button`
   background-color: ${(props) =>
     props.$backgroundColor ? props.$backgroundColor : '#df8b37'};
   cursor: pointer;
+
+  &[data-toggle='delete'] {
+    background-color: #ff3939;
+  }
 `;

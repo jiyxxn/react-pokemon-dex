@@ -13,13 +13,9 @@ const usePokemonActions = () => {
       e.target.closest('.poke-card').getAttribute('data-id')
     );
 
-    if (toggleBtn === 'register') {
-      dispatch(registerPokemon(selectedId));
-      toggleBtnType(e, '삭제하기', 'delete');
-    } else if (toggleBtn === 'delete') {
-      dispatch(deletePokemon(selectedId));
-      toggleBtnType(e, '데려가기', 'register');
-    }
+    toggleBtn === 'register'
+      ? dispatch(registerPokemon(selectedId))
+      : dispatch(deletePokemon(selectedId));
   };
 
   return { handleSelectedPokemon };

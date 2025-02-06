@@ -2,7 +2,7 @@ import { Button } from './Button';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import formatNumberWithZeros from '../utils/formatNumberWithZeros';
-import matchTypes from '../utils/matchTypes';
+import matchTypes from '../shared/matchTypes';
 import TypeLi from './TypeLi';
 
 const PokemonCard = ({

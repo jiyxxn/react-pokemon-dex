@@ -3,7 +3,7 @@ import { SectionWrapper } from '../components/Wrapper';
 import formatNumberWithZeros from '../utils/formatNumberWithZeros.js';
 import { Button } from '../components/Button.jsx';
 import TypeLi from '../components/TypeLi.jsx';
-import matchTypes from '../utils/matchTypes.js';
+import matchTypes from '../shared/matchTypes.js';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { validateExisted } from '../utils/validate.js';

@@ -23,7 +23,7 @@ const Dashboard = () => {
               name={pokemon[i].korean_name}
               number={pokemon[i].id}
               types={pokemon[i].types}
-              button={'delete'}
+              button="delete"
               arrivedAt={`/detail/${pokemon[i].id}`}
               onPokemonSelect={handleSelectedPokemon}
             />
