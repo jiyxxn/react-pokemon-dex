@@ -40,5 +40,12 @@ const MainBox = styled.div`
       transform: translateY(-30px);
     }
   }
+
+  @media (max-width: 540px) {
+    width: 80%;
+  }
+  @media (max-width: 1024px) {
+    width: 60%;
+  }
 `;
 export default Home;

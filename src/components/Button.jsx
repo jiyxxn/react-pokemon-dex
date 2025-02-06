@@ -46,6 +46,7 @@ export const StartMainButton = styled.button`
   cursor: pointer;
   transition: top 0.01s linear;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
   background-color: #e74c3c;
   box-shadow: 0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
     0 8px 0 0 #c24032, 0 8px 0 1px rgba(0, 0, 0, 0.4),
