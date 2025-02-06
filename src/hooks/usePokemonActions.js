@@ -12,11 +12,9 @@ const usePokemonActions = () => {
       e.target.closest('.poke-card').getAttribute('data-id')
     );
 
-    if (toggleBtn === 'register') {
-      dispatch(registerPokemon(selectedId));
-    } else if (toggleBtn === 'delete') {
-      dispatch(deletePokemon(selectedId));
-    }
+    toggleBtn === 'register'
+      ? dispatch(registerPokemon(selectedId))
+      : dispatch(deletePokemon(selectedId));
   };
 
   return { handleSelectedPokemon };

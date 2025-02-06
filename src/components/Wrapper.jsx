@@ -36,5 +36,7 @@ export const BoardWrapper = styled.section`
     margin-bottom: 40px;
     font-weight: 700;
     color: #3b5ca7;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
   }
 `;
