@@ -10,7 +10,7 @@ export const Button = styled.button`
   color: ${(props) => (props.color ? props.color : '#fafafa')};
   letter-spacing: -0.008em;
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : '#df8b37'};
+    props.$backgroundColor ? props.$backgroundColor : '#df8b37'};
   cursor: pointer;
 
   &[data-toggle='delete'] {

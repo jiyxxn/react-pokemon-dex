@@ -1,5 +1,6 @@
 @import url(./styles/reset.css);
 @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
 
 body {
   font-family: 'Noto Sans KR';

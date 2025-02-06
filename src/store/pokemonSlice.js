@@ -27,16 +27,20 @@ const pokemonSlice = createSlice({
         (pokemon) => pokemon.id === action.payload
       );
       if (selectedPokemon) {
-        toast.success('포켓몬이 전투에 참여합니다 ⚔️');
+        toast.success(`${selectedPokemon.korean_name}, 전투 준비 완료 ⚔️`);
         state.selectedPokemon.push(selectedPokemon);
       }
     },
 
     deletePokemon: (state, action) => {
+      const removedPokemon = state.selectedPokemon.find(
+        (pokemon) => pokemon.id === action.payload
+      );
+
       state.selectedPokemon = state.selectedPokemon.filter(
         (pokemon) => pokemon.id !== action.payload
       );
-      toast.success('포켓몬이 집으로 돌아갔습니다 🏠');
+      toast.success(`${removedPokemon.korean_name}, 오늘은 여기까지! 🏠`);
     },
   },
 });

@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { deletePokemon, registerPokemon } from '../store/pokemonSlice';
+import toggleBtnType from '../utils/toggleBtnType';
 
 const usePokemonActions = () => {
   const dispatch = useDispatch();
