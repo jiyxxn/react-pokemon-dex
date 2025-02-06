@@ -92,6 +92,7 @@ const DetailCard = styled.div`
 
   p {
     font-size: 1.2em;
+    line-height: 1.4;
   }
 
   p.poke-name {
