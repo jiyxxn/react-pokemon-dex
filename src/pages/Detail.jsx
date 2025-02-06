@@ -1,4 +1,9 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import {
+  useLocation,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from 'react-router-dom';
 import { SectionWrapper } from '../components/Wrapper';
 import formatNumberWithZeros from '../utils/formatNumberWithZeros.js';
 import { Button } from '../components/Button.jsx';
@@ -12,15 +17,17 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Detail = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const paramsDexNum = searchParams.get('dexNum'); // 쿼리 스트링 가져오기
+
   const pokemonData = useSelector((state) => state.pokemon.pokemonData);
   const selectedPokemon = useSelector((state) => state.pokemon.selectedPokemon);
   const { handleSelectedPokemon } = usePokemonActions();
 
-  const { id } = useParams();
   const navigate = useNavigate();
 
   const matchedPokemon = pokemonData.find(
-    (pokemon) => Number(id) === pokemon.id
+    (pokemon) => Number(paramsDexNum) === pokemon.id
   );
 
   const {

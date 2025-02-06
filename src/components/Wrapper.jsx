@@ -6,7 +6,7 @@ export const SectionWrapper = styled.section`
   height: ${(props) => (props.height ? props.height : 'auto')};
   margin: 0 auto;
   padding: 50px 3%;
-  display: flex;
+  display: grid;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
@@ -15,6 +15,7 @@ export const SectionWrapper = styled.section`
     props.$gradient
       ? 'linear-gradient(#fcefc8 0, #f3d37c 20%, #fcefc8 60%, #f3d37c 80%)'
       : ' #fcefc8'};
+  overflow-y: scroll;
 `;
 
 export const BoardWrapper = styled.section`
